@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/seletores.css">
+    <!--Tag para trabalhar CSS externo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <title>Seletores</title> 
+</head>
+<body>
+    <div id="main">
+        <section id="esq-menu">
+            <div id="card-menu">   
+                <h2>Conteúdos</h2>
+                <nav>
+                    <ul>
+                    <li><a class="links" href="#titulo">Início</a></li>
+                    <li><a class="links" href="#seletores">Seletores</a></li>
+                    <li><a class="links" href="#especificidade">Especificidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section id="dir">
+            <div id="card-conteudo">
+                    <section>
+                        <div id="titulo">
+                            <h2>O que é Especificidade e Seletores?</h2>
+                            <img id="ini-imagem"src="imgs/Sites-Para-Designers.jpg">
+                        </div>
+                        <div id="conteudo">
+                            <h2 id="seletores">Seletores</h2>
+                            <p>Os Seletores definem quais elementos um conjunto de regras CSS se aplica.</p>
+                            <hr>
+                            <h2>Seletores Básicos</h2>
+                            <p>
+                                <ul>
+                                    <li>
+                                        <h3>Seletor por tag</h3>
+                                        Este seletor básico escolhe todos os elementos que correspondem ao nome fornecido. <p><strong>Sintaxe:</strong> <code>nome-da-tag </code></p><strong>Exemplo:</strong> input corresponderá a qualquer elemento.
+                                    </li>
+                                    <br>
+                                    <hr>
+                                    <li>
+                                        <h3>Seletor por classe</h3>
+                                        Este seletor básico escolhe elementos baseados no valor de seu atributo classe. <p><strong>Sintaxe:</strong> <code>nome-da-classe </code></p><strong>Exemplo:</strong> .index irá corresponder a qualquer elemento que tenha o índice de classe (provavelmente definido por um atributo class="index", ou similar).
+                                    </li>
+                                    <br>
+                                    <hr>
+                                    <li>
+                                        <h3>Seletor por ID</h3>
+                                        Este seletor básico escolhe nós baseados no valor do atributo id. Deve existir apenas um elemento com o mesmo ID no mesmo documento. <p><strong>Sintaxe:</strong> <code>#nome-do-id </code></p><strong>Exemplo:</strong> #toc irá corresponder ao elemento que possuir o id=toc (definido por um atributo id="toc", ou similar).
+                                    </li>
+                                    <br>
+                                    <hr>
+                                    <li>
+                                        <h3>Seletor por universais</h3>
+                                        Este seletor básico irá escolher todos os nós. Ele também existe em um namespace único e em uma variante de todo o namespace também. <p><strong>Sintaxe:</strong> <code>* ns|* *|* </code></p><strong>Exemplo:</strong> * irá corresponder a todos os elementos do documento.
+                                    </li>
+                                    <br>
+                                    <hr>
+                                    <li>
+                                        <h3>Seletor por atributo</h3>
+                                        Este seletor básico ira escolher nós baseados no valor de um de seus atributos, ou até mesmo pelo próprio atributo. <p><strong>Sintaxe: </strong><code>[atrib] [atrib=valor] [atrib~=valor] [atrib|=valor] [atrib^=valor] [atrib$=valor] [atrib*=valor]</code></p> <strong>Exemplo:</strong> [autoplay] irá corresponder a todos os elementos que possuirem o atributo autoplay (para qualquer valor).
+                                    </li>
+                                    <br>
+                                </ul>
+                            </p>
+                        <hr>
+                            <h2 id="especificidade">Especificidade</h2>
+                            <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.</p>
+                            <hr>
+                            <h2>Como calcular?</h2>
+                            A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
+                            No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
+                            <p>A seguinte lista de seletores está incluida na especificação: 
+                                <ol>
+                                    <li>
+                                        Seletores Universais.
+                                    </li>
+                                    <li>
+                                        Tipo de Seletores.
+                                    </li>
+                                    <li>
+                                        Classes seletoras.
+                                    </li>
+                                    <li>
+                                        Atributos Seletores.
+                                    </li>
+                                    <li>
+                                        Pseudo-classes.
+                                    </li>
+                                    <li>
+                                        Seletores ID.
+                                    </li>
+                                    <li>
+                                        Estilo Online.
+                                    </li>
+
+                                </ol>
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
