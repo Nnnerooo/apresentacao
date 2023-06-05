@@ -7,73 +7,118 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-    <title>Seletores</title> 
+    <title>Especificidade</title> 
 </head>
 <body>
     <div id="main">
-        <section id="esq-menu">
-            <div id="card-menu">   
+        <section id="esq-links">
+            <div id="card-links">   
                 <h2>Conteúdos</h2>
                 <nav>
                     <ul>
-                    <li><a class="links" href="#titulo">Início</a></li>
-                    <li><a class="links" href="#seletores">Seletores</a></li>
-                    <li><a class="links" href="#especificidade">Especificidade</a></li>
+                    <li><a href="#titulo">Início</a></li>
+                    <li><a href="#seletores">Seletores</a></li>
+                    <li><a href="#especificidade">Especificidade</a></li>
                     </ul>
                 </nav>
             </div>
         </section>
 
-        <section id="dir">
+        <section id="dir-conteudo">
             <div id="card-conteudo">
                     <section>
                         <div id="titulo">
-                            <h2>O que é Especificidade e Seletores?</h2>
+                            <h1>O que é Especificidade e Seletores?</h1>
                             <img id="ini-imagem"src="imgs/Sites-Para-Designers.jpg">
                         </div>
                         <div id="conteudo">
-                            <h2 id="seletores">Seletores</h2>
-                            <p>Os Seletores definem quais elementos um conjunto de regras CSS se aplica.</p>
+                            <h1>Seletores</h1>
+                            <p>Os seletores do CSS são responsáveis por determinar quais elementos do HTML receberão estilização, ou seja, é um padrão que determina qual recurso será estilizado na sua página ou aplicação. Em suma, Os Seletores definem quais elementos um conjunto de regras CSS se aplica.</p>
                             <hr>
-                            <h2>Seletores Básicos</h2>
-                            <p>
+                            <h1>Seletores Básicos</h1>
                                 <ul>
                                     <li>
                                         <h3>Seletor por tag</h3>
-                                        Este seletor básico escolhe todos os elementos que correspondem ao nome fornecido. <p><strong>Sintaxe:</strong> <code>nome-da-tag </code></p><strong>Exemplo:</strong> input corresponderá a qualquer elemento.
+                                        Este seletor básico escolhe todos os elementos que correspondem ao nome fornecido.
                                     </li>
+                                        
+                                            <p>
+                                                <strong>
+                                                    Sintaxe:
+                                                </strong>
+                                            </p>
+                                        <div class="codigo">
+                                                <code>
+                                                <span class="sel">div</span>
+                                                <span class="a">{</span>
+                                                    <br>
+                                                    <span class="ea">color:</span>
+                                                    <span class="ee">blue</span>
+                                                    <span class="a">;</span>
+                                                    <br>
+                                                    <span class="a">}</span>
+                                                </code>
+                                        </div>
+                                        
                                     <br>
                                     <hr>
                                     <li>
                                         <h3>Seletor por classe</h3>
-                                        Este seletor básico escolhe elementos baseados no valor de seu atributo classe. <p><strong>Sintaxe:</strong> <code>nome-da-classe </code></p><strong>Exemplo:</strong> .index irá corresponder a qualquer elemento que tenha o índice de classe (provavelmente definido por um atributo class="index", ou similar).
+                                        Este seletor básico escolhe elementos baseados no valor de seu atributo classe. 
                                     </li>
+
+                                        <p>
+                                            <strong>
+                                                Sintaxe:
+                                            </strong> 
+                                        </p>
+                                            <div class="codigo">
+                                                <code>
+                                                <span class="class-id">.first</span>
+                                                <span class="a">{</span>
+                                                    <br>
+                                                    <span class="ea">color:</span>
+                                                    <span class="ee">red</span>
+                                                    <span class="a">;</span>
+                                                    <br>
+                                                    <span class="a">}</span>
+                                                </code>
+                                            </div>
+                                        
+        
                                     <br>
                                     <hr>
                                     <li>
                                         <h3>Seletor por ID</h3>
-                                        Este seletor básico escolhe nós baseados no valor do atributo id. Deve existir apenas um elemento com o mesmo ID no mesmo documento. <p><strong>Sintaxe:</strong> <code>#nome-do-id </code></p><strong>Exemplo:</strong> #toc irá corresponder ao elemento que possuir o id=toc (definido por um atributo id="toc", ou similar).
+                                        Este seletor básico escolhe nós baseados no valor do atributo id. Deve existir apenas um elemento com o mesmo ID no mesmo documento.
                                     </li>
-                                    <br>
-                                    <hr>
-                                    <li>
-                                        <h3>Seletor por universais</h3>
-                                        Este seletor básico irá escolher todos os nós. Ele também existe em um namespace único e em uma variante de todo o namespace também. <p><strong>Sintaxe:</strong> <code>* ns|* *|* </code></p><strong>Exemplo:</strong> * irá corresponder a todos os elementos do documento.
-                                    </li>
-                                    <br>
-                                    <hr>
-                                    <li>
-                                        <h3>Seletor por atributo</h3>
-                                        Este seletor básico ira escolher nós baseados no valor de um de seus atributos, ou até mesmo pelo próprio atributo. <p><strong>Sintaxe: </strong><code>[atrib] [atrib=valor] [atrib~=valor] [atrib|=valor] [atrib^=valor] [atrib$=valor] [atrib*=valor]</code></p> <strong>Exemplo:</strong> [autoplay] irá corresponder a todos os elementos que possuirem o atributo autoplay (para qualquer valor).
-                                    </li>
+
+                                        <p>
+                                            <strong>
+                                                Sintaxe:
+                                            </strong> 
+                                        </p>
+                                            <div class="codigo">
+                                                <code>
+                                                <span class="class-id">#second</span>
+                                                <span class="a">{</span>
+                                                    <br>
+                                                    <span class="ea">color:</span>
+                                                    <span class="ee">green</span>
+                                                    <span class="a">;</span>
+                                                    <br>
+                                                    <span class="a">}</span>
+                                                </code>
+                                            </div>
+                                        
                                     <br>
                                 </ul>
-                            </p>
+                            
                         <hr>
-                            <h2 id="especificidade">Especificidade</h2>
+                            <h1 id="especificidade">Especificidade</h1>
                             <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.</p>
                             <hr>
-                            <h2>Como calcular?</h2>
+                            <h1>Como calcular?</h1>
                             A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
                             No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
                             <p>A seguinte lista de seletores está incluida na especificação: 
