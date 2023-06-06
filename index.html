@@ -120,8 +120,59 @@
                             <hr>
                             <h1>Como calcular?</h1>
                             A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
-                            No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
-                            <p>A seguinte lista de seletores está incluida na especificação: 
+                            No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento. Na tabela abaixo podemos observar
+                            alguns valores do seletor "div", em cada situação, o valor da sua especificidade será diferente:
+
+                            <table>
+                                <thead>
+                            
+                                    <tr><th>Seletores</th>
+                                    <th id="espaco">IDs</th>
+                                    <th>Classes</th>
+                                    <th>Elementos</th>
+                                    <th>Especificidade</th></tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="purple"><strong>div</strong></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0-0-1</td>
+                                </tr>
+                                <tr>
+                                    <td class="purple"><strong>div # idTeste</strong></td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1-0-1</td>
+                                </tr>
+                                <tr>
+                                    <td class="purple"><strong>div.Teste1</strong></td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0-1-1</td>
+                                </tr>
+                                <tr>
+                                    <td class="purple"><strong>div.Teste1.Teste2.Teste3</strong></td>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>0-3-1</td>
+                                </tr>
+                                </tbody>
+            
+                            
+                    
+                            </table>
+
+                            <p>De acordo com os valores acima, a especificidade que vai ser priorizada é a que tem o valor cujo<br> é "<strong>1-0-1</strong>". Porque os valores da esquerda
+                            vão ser sempre os mais priorizados no calculo de especificidade CSS, ou seja, os valores que tem a maior ordem de precedência.
+
+                            </p>
+
+                            <p>A seguinte a lista de seletores está incluida na especificação: 
                                 <ol>
                                     <li>
                                         Seletores Universais.
@@ -142,7 +193,7 @@
                                         Seletores ID.
                                     </li>
                                     <li>
-                                        Estilo Online.
+                                        Estilo Inline.
                                     </li>
 
                                 </ol>
