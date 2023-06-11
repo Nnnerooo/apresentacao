@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <title>Especificidade</title> 
 </head>
 <body>
@@ -15,10 +16,10 @@
             <div id="card-links">   
                 <h2>Conteúdos</h2>
                 <nav>
-                    <ul>
-                    <li><a href="#titulo">Início</a></li>
-                    <li><a href="#seletores">Seletores</a></li>
+                    <ul>                 
+                    <li><a href="#seletores">Seletores</a></li>                   
                     <li><a href="#especificidade">Especificidade</a></li>
+                    <li><a href="#calcular">Como calcular?</a></li>
                     </ul>
                 </nav>
             </div>
@@ -117,86 +118,75 @@
                         <hr>
                             <h1 id="especificidade">Especificidade</h1>
                             <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.</p>
+                            
+                            <div class="codigo">
+                                <code>
+                                    <span class="es">(0,0,0)</span>
+                                </code>
+                            </div>
+
+                            <p>Separadamente, esses números representam a quantidade de ids, classes e elementos usados na formação de um seletor CSS. O digito a esquerda terá maior prioridade que o da direita, ou seja, a primeira posição é a de maior peso, enquanto a terceira posição é a de menos peso. Então será feita uma comparação, de número a número, para decidir qual seletor possui maior especificidade (ou peso/prioridade).</p>
+
+                            <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html" data-slug-hash="RwqPyQZ" data-editable="true" data-user="Nnnerooo">
+                                <span>See the Pen <a href="https://codepen.io/Nnnerooo/pen/RwqPyQZ">
+                                Untitled</a> by nero (<a href="https://codepen.io/Nnnerooo">@Nnnerooo</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+
                             <hr>
-                            <h1>Como calcular?</h1>
+
+                            <h1 id="calcular">Como calcular?</h1>
                             A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
                             No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento. Na tabela abaixo podemos observar
                             alguns valores do seletor "div", em cada situação, o valor da sua especificidade será diferente:
-
-                            <table>
-                                <thead>
-                            
-                                    <tr><th>Seletores</th>
-                                    <th id="espaco">IDs</th>
-                                    <th>Classes</th>
-                                    <th>Elementos</th>
-                                    <th>Especificidade</th></tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="purple"><strong>div</strong></td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>0-0-1</td>
-                                </tr>
-                                <tr>
-                                    <td class="purple"><strong>div # idTeste</strong></td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1-0-1</td>
-                                </tr>
-                                <tr>
-                                    <td class="purple"><strong>div.Teste1</strong></td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>0-1-1</td>
-                                </tr>
-                                <tr>
-                                    <td class="purple"><strong>div.Teste1.Teste2.Teste3</strong></td>
-                                    <td>0</td>
-                                    <td>3</td>
-                                    <td>1</td>
-                                    <td>0-3-1</td>
-                                </tr>
-                                </tbody>
-            
-                            
-                    
-                            </table>
-
+                            <div id="tab">
+                                <table>
+                                    <thead>
+                                
+                                        <tr><th>Seletores</th>
+                                        <th id="espaco">IDs</th>
+                                        <th>Classes</th>
+                                        <th>Elementos</th>
+                                        <th>Especificidade</th></tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="purple"><strong>div</strong></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0-0-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="purple"><strong>div # idTeste</strong></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1-0-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="purple"><strong>div.Teste1</strong></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0-1-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="purple"><strong>div.Teste1.Teste2.Teste3</strong></td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>0-3-1</td>
+                                    </tr>
+                                    </tbody>
+                
+                                
+                        
+                                </table>
+                            </div>
                             <p>De acordo com os valores acima, a especificidade que vai ser priorizada é a que tem o valor cujo<br> é "<strong>1-0-1</strong>". Porque os valores da esquerda
                             vão ser sempre os mais priorizados no calculo de especificidade CSS, ou seja, os valores que tem a maior ordem de precedência.
 
-                            </p>
-
-                            <p>A seguinte a lista de seletores está incluida na especificação: 
-                                <ol>
-                                    <li>
-                                        Seletores Universais.
-                                    </li>
-                                    <li>
-                                        Tipo de Seletores.
-                                    </li>
-                                    <li>
-                                        Classes seletoras.
-                                    </li>
-                                    <li>
-                                        Atributos Seletores.
-                                    </li>
-                                    <li>
-                                        Pseudo-classes.
-                                    </li>
-                                    <li>
-                                        Seletores ID.
-                                    </li>
-                                    <li>
-                                        Estilo Inline.
-                                    </li>
-
-                                </ol>
                             </p>
                         </div>
                     </section>
