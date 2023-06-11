@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="main">
+
         <section id="esq-links">
             <div id="card-links">   
                 <h2>Conteúdos</h2>
@@ -27,7 +28,6 @@
 
         <section id="dir-conteudo">
             <div id="card-conteudo">
-                    <section>
                         <div id="titulo">
                             <h1>O que é Especificidade e Seletores?</h1>
                             <img id="ini-imagem"src="imgs/Sites-Para-Designers.jpg">
@@ -35,7 +35,9 @@
                         <div id="conteudo">
                             <h1 id="seletores">Seletores</h1>
                             <p>Os seletores do CSS são responsáveis por determinar quais elementos do HTML receberão estilização, ou seja, é um padrão que determina qual recurso será estilizado na sua página ou aplicação. Em suma, Os Seletores definem quais elementos um conjunto de regras CSS se aplica.</p>
+
                             <hr>
+
                             <h1>Seletores Básicos</h1>
                                 <ul>
                                     <li>
@@ -139,6 +141,7 @@
                             A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
                             No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento. Na tabela abaixo podemos observar
                             alguns valores do seletor "div", em cada situação, o valor da sua especificidade será diferente:
+
                             <div id="tab">
                                 <table>
                                     <thead>
@@ -158,21 +161,21 @@
                                         <td>0-0-1</td>
                                     </tr>
                                     <tr>
-                                        <td class="purple"><strong>div # idTeste</strong></td>
+                                        <td class="purple"><strong>div #idTeste</strong></td>
                                         <td>1</td>
                                         <td>0</td>
                                         <td>1</td>
                                         <td>1-0-1</td>
                                     </tr>
                                     <tr>
-                                        <td class="purple"><strong>div.Teste1</strong></td>
+                                        <td class="purple"><strong>div .Teste1</strong></td>
                                         <td>0</td>
                                         <td>1</td>
                                         <td>1</td>
                                         <td>0-1-1</td>
                                     </tr>
                                     <tr>
-                                        <td class="purple"><strong>div.Teste1.Teste2.Teste3</strong></td>
+                                        <td class="purple"><strong>div .Teste1 .Teste2 .Teste3</strong></td>
                                         <td>0</td>
                                         <td>3</td>
                                         <td>1</td>
@@ -189,7 +192,6 @@
 
                             </p>
                         </div>
-                    </section>
                 </div>
             </div>
         </section>

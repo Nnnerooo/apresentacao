@@ -139,7 +139,7 @@ code{
     justify-content: center;
 }
 table{
-    width: 100px;
+    width: 80%;
     border-collapse: collapse;
     text-align: center;
     margin: 3% 0;
@@ -149,7 +149,7 @@ table{
 th{
     border: 2px solid black;
     padding: 8px;
-    background-color: #7B68EE;
+    background-color: #4c13f4;
     color: #FFFAFA;
 }
 
@@ -160,7 +160,8 @@ td{
 }
 
 .purple{
-    background-color: #7B68EE;
+    background-color: #26068f;
+    color: white;
 }
 
 #espaco{
@@ -171,6 +172,5 @@ td{
 /*codepen*/
 .cp_embed_wrapper{
     margin: 3% 0;
+    box-shadow: 5px 7px 3px rgb(178, 178, 178);
 }
-
-
