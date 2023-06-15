@@ -46,13 +46,14 @@ html{
 /*HOVER CONTEÚDOS*/
 #card-links h2{
     position: relative;
-    top: 22%;
+    top: 34%;
     transition: 0.2s;
 }
 #card-links:hover h2{
     position: relative;
     top: 0%; 
-    margin: 4%;  
+    margin-top: 13%;  
+    margin-bottom: 3%;
 }
 /*HOVER LINKS*/
 #card-links a{
@@ -74,7 +75,7 @@ html{
 #card-links a:hover{
     background-color:rgb(26, 3, 99);
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 /*CONTEUDO DA DIREITA*/
 #dir-conteudo{
