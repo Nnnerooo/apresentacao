@@ -31,7 +31,6 @@ html{
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 10px 10px 3px #00000048;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -173,4 +172,11 @@ td{
 .cp_embed_wrapper{
     margin: 3% 0;
     box-shadow: 5px 7px 3px rgb(178, 178, 178);
+}
+
+/*referencias*/
+.linkss{
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 20px;
 }
